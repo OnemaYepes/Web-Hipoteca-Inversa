@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Registro - Banco</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            text-align: left;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        .data {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registro Exitoso</h1>
+        <p>¡Gracias por registrarse! Aquí están los datos que nos proporcionó:</p>
+        <div class="data">
+            <p><strong>Cédula:</strong> {{ user.cedula }}</p>
+            <p><strong>Edad:</strong> {{ user.edad }}</p>
+            <p><strong>Estado Civil:</strong> {{ user.estado_civil }}</p>
+            {% if estado_civil in ["casado", "casada"] %}
+            <p><strong>Edad del Cónyuge:</strong> {{ user.edad_conyugue }}</p>
+            <p><strong>Género del Cónyuge:</strong> {{ user.sexo_conyugue }}</p>
+            {% endif %}
+            <p><strong>Valor del Inmueble:</strong> {{ user.valor_inmueble }}</p>
+            <p><strong>Tasa de Interés:</strong> {{ user.tasa_interes }}%</p>
+        </div>
+    </div>
+</body>
+</html>

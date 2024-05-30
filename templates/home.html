@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido al Banco</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BIENVENIDO AL BANCO</h1>
+        <p>¿Qué deseas hacer?</p>
+        <button onclick="obtenerHipoteca()">Obtener una hipoteca inversa</button>
+        <button onclick="salir()">Salir</button>
+    </div>
+
+    <script>
+        function obtenerHipoteca() {
+            window.location.href = "/form";
+        }
+
+        function salir() {
+            // Aquí llamas a la función que maneja la opción de salir
+            alert("Has seleccionado salir");
+            // Puedes redirigir a otra página o cerrar la ventana aquí
+        }
+    </script>
+</body>
+</html>

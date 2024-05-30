@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Personales - Banco</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            text-align: left;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin: 5px 0 20px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>EL BANCO</h1>
+        <h2>DATOS PERSONALES</h2>
+        <form id="datosPersonalesForm" action="/submit">
+            <label for="cedula">Por favor ingrese la cédula:</label>
+            <input type="text" id="cedula" name="cedula" required>
+
+            <label for="edad">Por favor ingrese su edad actual:</label>
+            <input type="number" id="edad" name="edad" min="62" required>
+
+                   
+            <label for="estado_civil">Por favor ingrese su estado civil:</label>
+            <select id="estado_civil" name="estado_civil" required>
+                <option value="">Seleccione...</option>
+                <option value="soltero">Soltero</option>
+                <option value="soltera">Soltera</option>
+                <option value="casado">Casado</option>
+                <option value="casada">Casada</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <div id="conyugueDatos">
+                <label for="edad_conyugue">Por favor ingrese la edad de su conyugue:</label>
+                <input type="number" id="edad_conyugue" name="edad_conyugue">
+
+                <label for="sexo_conyugue">Por favor ingrese el género de su conyugue:</label>
+                <input type="text" id="sexo_conyugue" name="sexo_conyugue">
+            </div>
+
+            <label for="valor_inmueble">Por favor ingrese el valor de la vivienda:</label>
+            <input type="number" id="valor_inmueble" name="valor_inmueble" required>
+
+            <label for="tasa_interes">Ingrese la tasa de interes:</label>
+            <input type="number" step="0.01" id="tasa_interes" name="tasa_interes" min="6" max="43" required>
+
+            <button type="submit">Calcular Hipoteca Inversa</button>
+        </form>
+    </div>
+
+    
+</body>
+</html>
