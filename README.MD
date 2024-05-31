@@ -5,6 +5,7 @@
 
 - Alejandro Gutierrez Vallejo
 - Andrea Márquez Sánchez
+- Juan Manuel Yepes Montoya (Implementación WEB) 
 
 ## ¿Qué es y para qué es?
 
@@ -23,6 +24,16 @@ Instale el paquete psycopg2 con:
 `
 pip install psycopg2
 `
+
+Instale el paquete Flask con:
+`
+pip install flask
+`
+
+Para ejecutar la implementación WEB, escriba en la terminal desde la raíz del proyecto:
+```
+python -m flask run --debug
+```
 
 ## Estructura sugerida
 

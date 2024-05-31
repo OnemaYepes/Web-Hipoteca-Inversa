@@ -38,7 +38,8 @@
         <h1>BIENVENIDO AL BANCO</h1>
         <p>¿Qué deseas hacer?</p>
         <button onclick="obtenerHipoteca()">Obtener una hipoteca inversa</button>
-        <button onclick="salir()">Salir</button>
+        <button onclick="buscarUsuarios()">Buscar Usuario</button>
+        <button onclick="eliminarUsuario()">Eliminar un usuario</button>
     </div>
 
     <script>
@@ -46,11 +47,14 @@
             window.location.href = "/form";
         }
 
-        function salir() {
-            // Aquí llamas a la función que maneja la opción de salir
-            alert("Has seleccionado salir");
-            // Puedes redirigir a otra página o cerrar la ventana aquí
+        function buscarUsuarios() {
+            window.location.href = "/search";
         }
+
+        function eliminarUsuario() {
+            window.location.href = "/delete";
+        }
+
     </script>
 </body>
 </html>

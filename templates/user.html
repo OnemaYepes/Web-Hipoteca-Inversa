@@ -43,7 +43,7 @@
             <p><strong>Cédula:</strong> {{ user.cedula }}</p>
             <p><strong>Edad:</strong> {{ user.edad }}</p>
             <p><strong>Estado Civil:</strong> {{ user.estado_civil }}</p>
-            {% if estado_civil in ["casado", "casada"] %}
+            {% if user.estado_civil in ["casado", "casada"] %}
             <p><strong>Edad del Cónyuge:</strong> {{ user.edad_conyugue }}</p>
             <p><strong>Género del Cónyuge:</strong> {{ user.sexo_conyugue }}</p>
             {% endif %}
